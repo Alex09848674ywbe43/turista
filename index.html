@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Website turistico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css?0000">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link"><b>Inicio</b></a> </li>
+          <li> <a href="#about" class="nav-link"><b>Acerca</b></a> </li>
+          <li> <a href="#turis" class="nav-link"><b>Turísmo</b></a> </li>
+          <li> <a href="#destin" class="nav-link"><b>Destino</b></a> </li>
+          <li> <a href="#gallery" class="nav-link"><b>Galeria</b></a> </li>
+          <li><a href="#contact"><b>Contacto</b></a></li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1 style="color:yellow;">PEDRO PABLO GÓMEZ</h1>
+
+          <h2 style="color:#fd0c2c;"><b><i>Un viaje se vive 3 veces: <br>
+        Cuando lo soñamos, cuando lo vivimos, y cuando lo recordamos.</b></i></h2>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
+        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
+        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
+        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+
+
+
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5><b>ACERCA DE....</b></h5>
+          <h2>Welcome to Pedro Pablo Gómez</h2>
+          <p>Es una parroquia rural situada en el cantón Jipijapa, al sur de la provincia de Manabí en Ecuador, tiene una población de 3.564 habitantes.<br>
+          <b>Sus fiestas parroquiales se celebran el 23 de Octubre.</b> </p>
+          <p>Pedro Pablo Gómez tiene lugares maravillosos y apropiados ofreciendo atractivos turísticos naturales, culturales y paisajísticos, para el desarrollo de aventura y excursión gracias a sus grandes montañas donde existen senderos, cascadas, y plantaciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="turis">
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>TURISMO</h2>
+        <p><h3><i>Entre los cuales se destacan:</i></h3></p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Cascadas.</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Senderos.</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Biodiversidad florística.</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Museos.</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Cuevas.</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Lugares arqueológicos.</span>
+          </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>LO QUE PODRAS ENCONTRAR....</h5>
+          <h2>Encantos de la parroquia Pedro Pablo Gómez</h2>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3><center>FIESTA PARROQUIAL</center></h3>
+            <p><center>Desfiles, rodeos montubios, elecciones de reinas, entre otras mas...</center></p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3><center>GASTRONOMÍA</center></h3>
+            <p><center>Platos tipicos</center></p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <a href="https://www.spatial.io/s/Galeria-interactiva-ra-63a38158c43aa500019287e1?share=5999411489517011074"><img src="image/r4.jpg" alt=""></a>
+          </div>
+          <div class="text">
+            <h3><center>Galería interactiva realidad aumentada</center></h3>
+            <p><center>Código QR</center> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>COMUNICACIÓN</h5>
+          <h2>Opinión....</h2>
+        </div>
+
+        <div class="para">
+          <p>La parroquia Pedro Pablo Gómez no pasa de moda sus tradiciones, se puede observar que es opacada por falta de personajes (por lo que antes era más movido), sin embargo en el ámbito turístico la comunidad cuenta con una riqueza sumamente resaltante para sus habitantes como visitantes, haciendo que la misma parroquia sea un lugar maravilloso remarcable.</p>
+
+          <div class="box flex">
+            <div class="img">
+              <img src="image/c.jpg" alt="">
+            </div>
+            <div class="name">
+              <h5>Sr. Nativo De La Cruz España</h5>
+              <h5>Habitante de la parroquía</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="destin">
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          
+          <h2>¿Comó llegar a visitar la parroquía Pedro Pablo Gómez?</h2>
+          <p> Su cantón es Jipijapa, su vía <b>"La esperanza"</b> misma que esta conectada con la provincia de Manabí y del Guayas.</p>
+
+          <h2>Transportes</h2>
+          <p> Cuenta con medios de transportes públicos como; buses, camionetas y motos.</p>
+
+        
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">PATRIMONIO NATURAL</h2>
+            <div class="accordionItemContent">
+              <p>La Parroquia Rural de Pedro Pablo Gómez, está constituido por la variedad de cascadas, ríos y paisajes naturales que conforman la flora y fauna de este territorio, mismo que sobre salta valor relevante desde el punto de vista estético, científico y medio ambiental.</p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">EVENTOS CULTURALES</h2>
+            <div class="accordionItemContent">
+              <p><li><h4>Las fiestas religiosas que se celebran son:</h4></li>
+                <li>Semana Santa.</li>
+                <li>Fieles difuntos</li>
+                <li>La Virgen de las Mercedes</li>
+                <li>La Virgen de Monserrate, San Pedro y San Pablo, Las Cruces, entre otras.</li>
+                <li><h4>Tambien podemos encontrar otros eventos como:</h4></li>
+                <li>Realización de misas, procesiones, juegos tradicionales, deportivos y bailes.</li>
+                <li>El 24 de octubre se celebran la fiesta de la parroquialización.</p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">GASTRONOMÍA</h2>
+            <div class="accordionItemContent">
+              <p>
+                <h4>Podemos encontrar verdadero deleite para propios y extraños como:</h4> 
+                <li>Seco de gallina criolla.</li>
+                <li>Greñoso de maíz con pollo.</li>
+                <li>Natilla de maíz.</li>
+                <li>Tortillas de maíz</li>
+                <li>Ceviche y encebollado.</li>
+                <li>Asados de carne, pollo y cerdo</li>
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">ACTIVIDADES PERMITIDAS</h2>
+            <div class="accordionItemContent">
+              <p>
+                <li>Senderismo.</li>
+          <li>Observación de flora y fauna.</li>
+          <li>Recorrido autoguiado.</li>
+          <li>Fotografía.</li>
+          <li>Camping.</li>
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+<section id="gallery">
+  <section class="gallary top " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>BIENVENIDO A NUESTRA GALERÍA DE FOTOS</h5>
+          <h2>Galería de fotos </h2>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+       <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g8.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g9.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g10.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g11.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g12.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g13.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g14.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g15.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g16.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g17.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g18.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g19.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15952.83762346869!2d-80.56290778092959!3d-1.6272045318708173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902c3a24d9bdffcf%3A0x3c6805be260594b1!2sPedro%20Pablo%20G%C3%B3mez!5e0!3m2!1ses!2sec!4v1661118049610!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+
+<footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons" />
+        <p> GAD PARROQUIAL PEDRO PABLO GÓMEZ-MANABÍ</p>
+
+        <p>Redes Sociales</p>
+        <div class="list">
+          <img src="https://img.icons8.com/color/48/000000/facebook.png" />
+          <a href="https://es-la.facebook.com/people/Gad-Parroquial-Pedro-Pablo-G%C3%B3mez/100004307928265/">facebook</a>
+          <img src="https://img.icons8.com/color/48/000000/instagram.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/whatsapp.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Localidad</h3>
+
+        <ul>
+          <li>Pedro Pablo Gómez<br> cantón Jipijapa - Manabí</a></li>
+          </ul>
+        </div>
+
+      <div class="box">
+        <h3>Dirección</h3>
+        <ul>
+          <li><i>Calle principal, <br> Barrio 24 de octubre vía
+          Rcto. San Pablo</a></li>
+          </ul>
+        </div>
+
+<section id="contact">
+      <div class="box">
+        <h3>Contactos</h3>
+
+        <ul>
+          <li><i>0994451842</i></li>
+          <li><i>094054648</i></li>
+          <li><i>gadppg@hotmail.com</i></li>
+          
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<div class="end-text">
+      <p><b><i><center>Copyright ©2022 Todos los derechos reservados | Realizado por Alexander Avila G</center></b></i></p>
+    </div>
+  </section>
+
+</body>
+</html>
