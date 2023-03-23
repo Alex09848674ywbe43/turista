@@ -139,8 +139,7 @@ header ul li a:hover {
 
 .home .text {
   max-width: 50%;
-  color: cyan;
-  margin: 20% 0 0 10%;
+  margin: 7% 0 0 10%;
 }
 
 .home h1 {
@@ -338,7 +337,6 @@ input {
   background: #3f9cc1;
   padding: 40px;
   width: 40%;
-  height: 600px;
   position: absolute;
   top: -13%;
   right: 10%;
