@@ -4,7 +4,7 @@
 <head>
   <title>Pedro Pablo Gomez - Turismo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css?0000">
+  <link rel="stylesheet" href="css/style.css?000323420">
   <meta charset="UTF-8">
 
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -19,6 +19,96 @@
 </head>
 
 <body>
+
+  <style>
+    /* Estilo general del sitio */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #fff;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 40px;
+}
+
+.nav-link {
+  display: block;
+  padding: 20px 0;
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #fd0c2c;
+}
+
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-style: italic;
+  color: #999;
+  margin: 0;
+}
+.text h1, .text h2 {
+  color: white;
+}
+
+.slide {
+  filter: grayscale(70%) saturate(1.2);
+}
+
+
+
+  </style>
   <header class="header" id="navigation-menu">
     <div class="container">
       <nav>
@@ -61,42 +151,77 @@
     }
   </script>
 
-  <section class="home" id="home">
-    <div class="head_container">
-      <div class="box">
-        <div class="text">
-          <h1 style="color:yellow;">PEDRO PABLO GÓMEZ</h1>
-
-          <h2 style="color:#fd0c2c;"><b><i>Un viaje se vive 3 veces: <br>
-        Cuando lo soñamos, cuando lo vivimos, y cuando lo recordamos.</b></i></h2>
-        </div>
-      </div>
-
-      <div class="image">
-        <img src="image/home1.jpg" class="slide">
-      </div>
-      <div class="image_item">
-        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
-        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
-        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
-        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
+<section class="home" id="home">
+  <div class="head_container">
+    <div class="box">
+      <div class="text">
+        <h1>PEDRO PABLO GÓMEZ</h1>
+        <h2><b><i>Un viaje se vive 3 veces: <br>
+          Cuando lo soñamos, cuando lo vivimos, y cuando lo recordamos.</b></i></h2>
       </div>
     </div>
+
+    <div class="image">
+      <img src="image/home1.jpg" class="slide">
+    </div>
+
+    <div class="image_item">
+      <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
+      <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
+      <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
+      <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
+    </div>
+  </div>
+</section>
+
+<style>
+  .slide {
+    filter: opacity(0.8);
+  }
+
+ 
+  .head_container .box {
+  background-color: rgba(0,0,0,0.5); /* Fondo gris semi-transparente */
+  padding: 30px; /* Añade un poco de espacio alrededor del texto */
+}
+
+.head_container .box h1, .head_container .box h2 {
+  color: white; /* Cambia el color del texto a blanco */
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5); /* Agrega un sombreado al texto */
+  border: 2px solid rgba(255,255,255,0.5); /* Agrega un borde blanco semi-transparente al texto */
+  padding: 10px; /* Añade un poco de espacio alrededor del texto */
+}
+</style>
+
+<script>
+  const images = ['image/home1.jpg', 'image/home2.jpg', 'image/home3.jpg', 'image/home4.jpg'];
+  let currentIndex = 0;
+
+  function changeImage() {
+    const image = document.querySelector('.slide');
+    currentIndex = (currentIndex + 1) % images.length;
+    image.src = images[currentIndex];
+  }
+
+  setInterval(changeImage, 5000);
+
+  function img(anything) {
+    document.querySelector('.slide').src = anything;
+  }
+
+  function change(change) {
+    const line = document.querySelector('.image');
+    line.style.background = change;
+  }
+</script>
+
+
+
+
   </section>
-  <script>
-    function img(anything) {
-      document.querySelector('.slide').src = anything;
-    }
-
-    function change(change) {
-      const line = document.querySelector('.image');
-      line.style.background = change;
-    }
-  </script>
 
 
 
-  </section>
   <section class="about top" id="about">
     <div class="container flex">
       <div class="left">
@@ -220,19 +345,19 @@
 <section id="destin">
   <section class="restaurant top" id="restaurant">
     <div class="container flex">
-      <div class="left">
-        <img src="image/re.jpg" alt="">
-      </div>
+    <div class="left">
+  <img src="image/re.jpg" alt="" onclick="window.location.href='./galeria';">
+</div>
       <div class="right">
         <div class="text">
-          
-          <h2>¿Comó llegar a visitar la parroquía Pedro Pablo Gómez?</h2>
+          <div class="accordionWrapper">
+          <div class="accordionItem open">
+          <h2 style="color:black">¿Comó llegar a visitar la parroquía Pedro Pablo Gómez?</h2>
           <p> Su cantón es Jipijapa, su vía <b>"La esperanza"</b> misma que esta conectada con la provincia de Manabí y del Guayas.</p>
-
-          <h2>Transportes</h2>
+          <h2 class="accordionIHeading">Transportes</h2>
           <p> Cuenta con medios de transportes públicos como; buses, camionetas y motos.</p>
 
-        
+          </div>  </div>
         </div>
         <div class="accordionWrapper">
           <div class="accordionItem open">
@@ -420,10 +545,9 @@
 
         <p>Redes Sociales</p>
         <div class="list">
-          <img src="https://img.icons8.com/color/48/000000/facebook.png" />
-          <a href="https://es-la.facebook.com/people/Gad-Parroquial-Pedro-Pablo-G%C3%B3mez/100004307928265/">facebook</a>
-          <img src="https://img.icons8.com/color/48/000000/instagram.png" />
-          <img src="https://img.icons8.com/color-glass/48/000000/whatsapp.png" />
+          <img src="https://img.icons8.com/color/48/000000/facebook.png" onclick="window.location.href='https://www.facebook.com/people/Gad-Parroquial-Pedro-Pablo-G%C3%B3mez/100004307928265/';"/>
+          <img src="https://img.icons8.com/color/48/000000/instagram.png" onclick="window.location.href='https://www.instagram.com/explore/locations/617278774/pedro-pablo-gomez-manabi-ecuador/';"/>
+          <img src="https://img.icons8.com/color-glass/48/000000/whatsapp.png" onclick="window.location.href='https://api.whatsapp.com/send?phone=593994451842';"/>
         </div>
       </div>
 
